@@ -1,0 +1,10 @@
+.login-page {
+	max-width: 20rem;
+	padding: 2rem;
+	margin: auto;
+}
+
+.login-input {
+	width: 16rem;
+	margin: auto;
+}
