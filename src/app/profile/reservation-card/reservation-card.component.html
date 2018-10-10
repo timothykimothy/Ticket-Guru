@@ -1,25 +1,28 @@
-<div class="card mx-auto reservation-card">
-	<div class="reservation-info">
-		<span class="reservation-label">Name:</span>
-		<span class="reservation-value">{{performance?.show.name}}</span>
+<div class="card mx-auto card-padding">
+	<div class="card-info">
+		<span class="card-label">Name:</span>
+		<span class="card-value">{{performance?.show.name}}</span>
 	</div>
-	<div class="reservation-info">
-		<span class="reservation-label">Description:</span>
-		<span class="reservation-value">{{performance?.show.description}}</span>
+	<div class="card-info">
+		<span class="card-label">Description:</span>
+		<span class="card-value">{{performance?.show.description}}</span>
 	</div>
-	<div class="reservation-info">
-		<span class="reservation-label">Show Time:</span>
-		<span class="reservation-value">{{performance?.showTime.toLocaleString()}}</span>
+	<div class="card-info">
+		<span class="card-label">Show Time:</span>
+		<span class="card-value">{{performance?.showTime.toLocaleString()}}</span>
 	</div>
-	<div class="reservation-info">
-		<span class="reservation-label">Seats:</span>
+	<div class="card-info">
+		<span class="card-label">Seats:</span>
 		<br>
 		<div *ngFor="let seat of reservation.seats" class="seat-info">
 			Row: {{seat.row}}
-			Seat: {{seat.seatNumber}}</div>
+			Seat: {{seat.seatNumber}}
+		</div>
 	</div>
-	<div class="reservation-info">
-			<span class="reservation-label">Confirmation:</span>
-			<span *ngIf="reservation.reservationConfirmed"class="reservation-value">This reservation has been confirmed!</span>
-			<button type="button" class="btn btn-primary btn-sm" style="margin-top:-.15em;"*ngIf="!reservation.reservationConfirmed" (click)=confirmReservation()>Confirm</button>
+	<div class="card-info">
+		<span class="card-label">Confirmation:</span>
+		<span *ngIf="reservation.reservationConfirmed" class="reservation-value">This reservation has been confirmed!</span>
+		<button type="button" class="btn btn-primary btn-sm" style="margin-top:-.15em;" *ngIf="!reservation.reservationConfirmed"
+			(click)=confirmReservation()>Confirm</button>
+	</div>
 </div>

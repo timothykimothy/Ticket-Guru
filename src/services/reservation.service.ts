@@ -14,7 +14,7 @@ export class ReservationService {
   constructor(private httpClient: HttpClient) { }
 
   getReservationsForCustomer(customerId: number): Observable<Reservation[]> {
-    return this.httpClient.get<any>(this.BACKEND_URL + 'reservations', {
+    return this.httpClient.get<Reservation[]>(this.BACKEND_URL + 'reservations', {
       params: {
         customerId: customerId.toString(),
         include: "seats"
@@ -23,7 +23,7 @@ export class ReservationService {
   }
 
   confirmReservation(customerId: number): Observable<Reservation> {
-    return this.httpClient.patch<any>(this.BACKEND_URL + 'reservations/' + customerId, {
+    return this.httpClient.patch<Reservation>(this.BACKEND_URL + 'reservations/' + customerId, {
       reservationConfirmed: true
     });
   }

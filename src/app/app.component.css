@@ -1,0 +1,27 @@
+.page-section {
+	padding-top: 2em;
+	max-width: 80em;
+	border:none;
+}
+.card-padding {
+	margin-top: .2em;
+	padding-left: .5em;
+	padding-top: 1em;
+	width: 100%;
+}
+.card-holder{
+	max-height: 40em;
+	overflow-y: auto;
+}
+.card-info {
+	margin-top:.15em;
+	margin-bottom:.15em;
+}
+.card-label {
+	float:left;
+	font-weight: bold;
+	margin-right: 1em;
+}
+.card-value {
+	float:left;
+}

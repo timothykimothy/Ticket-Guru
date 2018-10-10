@@ -14,8 +14,17 @@ export class PerformanceService {
   constructor(private httpClient: HttpClient) { }
 
   getPerformance(performanceId: number): Observable<Performance> {
-    return this.httpClient.get<any>(this.BACKEND_URL + 'performances/' + performanceId, {
+    return this.httpClient.get<Performance>(this.BACKEND_URL + 'performances/' + performanceId, {
       params: {
+        include:"show"
+      } 
+    });
+  }
+
+  getPerformancesByShowId(showId: number): Observable<Performance[]> {
+    return this.httpClient.get<Performance[]>(this.BACKEND_URL + 'performances', {
+      params: {
+        showId: showId.toString(),
         include:"show"
       } 
     });

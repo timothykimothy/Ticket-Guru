@@ -1,0 +1,21 @@
+.venue-showtimes-section {
+	margin-bottom: .3em;
+	margin-left: .3em;
+}
+.venue-act-label {
+	margin-left: 1em;
+	margin-right: 1em;
+	font-size:1.2em;
+	font-weight: bold;
+}
+
+.show-time {
+	border: .07em solid #1f89e2;
+	margin: .2em;
+	display: inline-block;
+}
+
+.show-time:hover{
+	font-weight: bold;
+	cursor: pointer;
+}

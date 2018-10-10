@@ -1,0 +1,27 @@
+<div class="card mx-auto card-padding">
+  <div class="card-info">
+    <span class="card-label">Name:</span>
+    <span class="card-value">{{venue?.name}}</span>
+  </div>
+  <div class="card-info">
+    <span class="card-label">Description:</span>
+    <span class="card-value">{{venue?.description}}</span>
+  </div>
+  <div class="card-info">
+    <span class="card-label">Address:</span>
+    <span class="card-value">{{venue?.address}}</span>
+  </div>
+  <div class="card-info">
+    <span class="card-label">Url:</span>
+    <span class="card-value">{{venue?.url}}</span>
+  </div>
+  <div class="card-info">
+    <span class="card-label">Shows:</span>
+    <br>
+    <div class="venue-showtimes-section" *ngFor="let show of venue?.shows">
+      <div class="venue-act-label"> Act: <a target="_blank" [href]="show.url">{{show.name}}</a></div>
+      <div class="show-time" *ngFor="let performaceShowTime of performanceShowTimesMap[show.id]">
+        {{performaceShowTime?.showTime}}
+      </div>
+    </div>
+  </div>

@@ -5,7 +5,6 @@ export interface Customer {
 	address: string,
 	email: string
 }
-
 export interface Seat{
 	id: number,
 	performanceId: number,
@@ -14,7 +13,6 @@ export interface Seat{
 	row: number,
 	seatNumber: number
 }
-
 export interface Reservation {
 	id: number,
 	customerId: number,
@@ -23,7 +21,6 @@ export interface Reservation {
 	reservationConfirmed: boolean,
 	seats: Seat[]
 }
-
 export interface Show {
 	description: string,
 	id: number,
@@ -36,4 +33,12 @@ export interface Performance {
 	show: Show,
 	showId: number,
 	showTime: Date
+}
+export interface Venue {
+	id: number,
+	name: string,
+	description: string,
+	address: string,
+	url: string,
+	shows: Show[]
 }

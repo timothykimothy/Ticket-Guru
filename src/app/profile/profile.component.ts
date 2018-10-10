@@ -6,7 +6,7 @@ import { ReservationService } from 'src/services/reservation.service';
 @Component({
 	selector: 'app-profile',
 	templateUrl: './profile.component.html',
-	styleUrls: ['./profile.component.css']
+	styleUrls: ['./profile.component.css', './../app.component.css']
 })
 export class ProfileComponent implements OnInit {
 

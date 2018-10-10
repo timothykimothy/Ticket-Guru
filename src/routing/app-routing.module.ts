@@ -12,6 +12,11 @@ const appRoutes: Routes = [
 		path: 'profile',
 		loadChildren: '../app/profile/profile.module#ProfileModule',
 		canActivate: [SessionService]
+	},
+	{
+		path: 'tickets',
+		loadChildren: '../app/tickets/tickets.module#TicketsModule',
+		canActivate: [SessionService]
 	}
 ];
 

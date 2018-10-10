@@ -1,3 +1,14 @@
+## Structure
+App Module/Component
+* Navbar Component
+*	Login Module/Component
+* Profile Module/Component
+	* Reservation Card Component
+* Tickets Module/Component
+	* 
+* Seats Module/Component
+
+
 # TicketGuru
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.

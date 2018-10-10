@@ -1,4 +1,4 @@
-<div class="card mx-auto profile-card">
+<div class="card mx-auto page-section">
 	<h4>Profile:</h4>
 	<div class="profile-info">
 		<span class="profile-label">First Name:</span>
@@ -14,7 +14,7 @@
 	</div>
 
 	<h4 style="margin-top:1em;margin-bottom: .5em">Reservations:</h4>
-	<div class="reservation-card-holder">
+	<div class="card-holder">
 		<app-reservation-card *ngFor='let reservation of reservations' [reservation]="reservation"></app-reservation-card>
 	</div>
 </div>

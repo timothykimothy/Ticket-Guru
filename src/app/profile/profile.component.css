@@ -1,21 +1,11 @@
-.profile-card {
-	padding-top: 2em;
-	width: fit-content;
-	border:none;
-}
 .profile-info {
 	width:fit-content;
 }
 .profile-label {
-	width: 10em;
+	margin-right: 5em;
 	float:left;
 	font-weight: bold;
 }
 .profile-value {
-	width: 10em;
 	float:left;
-}
-.reservation-card-holder{
-	max-height: 40em;
-	overflow-y: auto;
 }
