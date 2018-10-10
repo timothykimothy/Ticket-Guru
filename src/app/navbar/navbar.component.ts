@@ -9,8 +9,8 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent {
 
-  constructor(private router: Router, private sessionService: SessionService) {}
-  
+  constructor(private router: Router, private sessionService: SessionService) { }
+
   isLoggedIn() {
     return this.sessionService.isLoggedIn();
   }

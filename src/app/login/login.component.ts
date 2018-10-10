@@ -6,25 +6,26 @@ import { SessionService } from '../../services/session.service';
 
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+	selector: 'app-login',
+	templateUrl: './login.component.html',
+	styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
 
-  selectedCustomer: Customer;
-  customersList: Customer[];
+	selectedCustomer: Customer;
+	customersList: Customer[];
 
-  constructor(private router: Router, private customerService: CustomerService, private sessionService: SessionService) {}
+	constructor(private router: Router, private customerService: CustomerService, private sessionService: SessionService) { }
 
-  ngOnInit() {
-    this.customerService.getCustomersList().subscribe((customerList) => {
-      this.customersList = customerList;
-    })
-  }
+	ngOnInit() {
+		this.customerService.getCustomersList().subscribe((customerList) => {
+			this.customersList = customerList;
+			this.selectedCustomer = this.customersList[0];
+		})
+	}
 
-  login() {
-    this.sessionService.login(this.selectedCustomer);
-    this.router.navigate(['/TODO: Insert route forHomeProfilePage']);
-  }
+	login() {
+		this.sessionService.login(this.selectedCustomer);
+		this.router.navigate(['/profile']);
+	}
 }

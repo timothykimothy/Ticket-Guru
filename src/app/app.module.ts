@@ -7,16 +7,16 @@ import { AppRoutingModule } from '../routing/app-routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavbarComponent
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		NavbarComponent
+	],
+	imports: [
+		BrowserModule,
+		HttpClientModule,
+		AppRoutingModule
+	],
+	providers: [],
+	bootstrap: [AppComponent]
 })
 export class AppModule { }

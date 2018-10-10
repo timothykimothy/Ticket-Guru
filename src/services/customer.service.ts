@@ -14,6 +14,6 @@ export class CustomerService {
   constructor(private httpClient: HttpClient) { }
 
   getCustomersList(): Observable<Customer[]> {
-    return this.httpClient.get<any>(this.BACKEND_URL + '/customers');
+    return this.httpClient.get<any>(this.BACKEND_URL + 'customers');
   }
 }

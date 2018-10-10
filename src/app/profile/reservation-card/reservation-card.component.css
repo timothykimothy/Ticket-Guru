@@ -1,0 +1,19 @@
+.reservation-card {
+	padding-top: 2em;
+	width: 100%;
+}
+.reservation-info {
+	margin-top:.15em;
+	margin-bottom:.15em;
+}
+.reservation-label {
+	float:left;
+	font-weight: bold;
+	margin-right: 1em;
+}
+.reservation-value {
+	float:left;
+}
+.seat-info {
+	display: block;
+}

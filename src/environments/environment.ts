@@ -3,8 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
-  BACKEND_URL:'test'
+	production: false,
+	BACKEND_URL: 'http://ec2-54-159-33-6.compute-1.amazonaws.com:5005/ticket-guru/api/'
 };
 
 /*
