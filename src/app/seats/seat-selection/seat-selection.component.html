@@ -1,0 +1,21 @@
+<div class="card mx-auto card-padding">
+	<form [formGroup]="ticketsForm" (ngSubmit)="addToCart()">
+		<div class="card-info">
+			<span class="card-label">Level:</span>
+			<span class="card-value">{{level?.name}}</span>
+		</div>
+		<div class="card-info">
+			<span class="card-label">Price:</span>
+			<span class="card-value">{{level?.price | currency: 'USD'}}</span>
+		</div>
+		<div class="card-info">
+			<span class="card-label">Seats Available:</span>
+			<span class="card-value">{{level?.seatsAvailable}}</span>
+		</div>
+		<div class="card-info">
+			<span class="card-label">Purchase Tickets:</span>
+			<input class="form-control form-control-sm input-box" type="number" formControlName="numTickets">
+			<button class="btn btn-primary btn-sm" type="submit" [disabled]="!ticketsForm?.valid" style="margin-top:-.15em;">Add To Cart</button>
+		</div>
+	</form>
+</div>

@@ -39,6 +39,42 @@ export interface Venue {
 	name: string,
 	description: string,
 	address: string,
+	url: string
+}
+export interface VenueShows {
+	id: number,
+	name: string,
+	description: string,
+	address: string,
 	url: string,
 	shows: Show[]
+}
+export interface Level {
+	id: number,
+	venueId: number,
+	name: string,
+	price: number,
+	numRows: number,
+	seatsPerRow: number,
+	seatsAvailable: number
+}
+export interface PerformanceLevels {
+	id: number,
+	show: Show,
+	showId: number,
+	showTime: Date
+	seatsAvailable: number,
+	levels: Level[]
+}
+export interface SeatSelection {
+	name: string,
+	price: number,
+	seatsAvailable: number,
+	seatsSelected: number
+}
+export interface SeatRequest {
+	level: {
+		id: number
+	},
+	numSeats: number
 }

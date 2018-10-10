@@ -1,0 +1,48 @@
+<div class="card mx-auto page-section">
+	<span class="main-title">Purchase Ticket:</span>
+	<span class="section-title">Show Info:</span>
+	<div class="page-info">
+		<span class="page-label">Act:</span>
+		<span class="page-value"><a target="_blank" [href]="performance?.show.url">{{performance?.show.name}}</a></span>
+	</div>
+	<div class="page-info">
+		<span class="page-label">Time:</span>
+		<span class="page-value">{{performance?.showTime.toLocaleString()}}</span>
+	</div>
+</div>
+<div class="card mx-auto page-section">
+	<span class="section-title">Venue Info:</span>
+	<div class="page-info">
+		<span class="page-label">Venue Name:</span>
+		<span class="page-value"> <a target="_blank" [href]="venue?.url">{{venue?.name}}</a></span>
+	</div>
+	<div class="page-info">
+		<span class="page-label">Description:</span>
+		<span class="page-value">{{venue?.description}}</span>
+	</div>
+	<div class="page-info">
+		<span class="page-label">Address:</span>
+		<span class="page-value">{{venue?.address}}</span>
+	</div>
+</div>
+<div class="card mx-auto page-section">
+	<span class="section-title">Seat Selection:</span>
+	<div class="card-holder">
+		<app-seat-selection *ngFor="let level of performance?.levels; index as i;" [level]="level" (addToCartEvent)="onAddToCart(i, $event)"></app-seat-selection>
+	</div>
+</div>
+<div class="card mx-auto page-section">
+	<span class="section-title">Checkout:</span>
+	<div class="card mx-auto card-padding">
+		<div *ngFor="let seatRequest of seatRequests; index as i">
+			<div class="page-info">
+				<span class="page-label">{{performance?.levels[i].name}}:</span>
+				<span class="page-label">{{seatRequest?.numSeats}}</span>
+				<button class="btn btn-danger btn-sm page-label" (click)="removeLevel(i)">X</button>
+			</div>
+		</div>
+		<div class="page-info">
+			<button class="btn btn-primary btn-sm" type="button" [disabled]="!isValidCart()" style="margin-top:-.15em;" (click)="makeReservation()">Checkout</button>
+		</div>
+	</div>
+</div>

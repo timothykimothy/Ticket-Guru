@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { Venue } from 'src/types/types';
+import { VenueShows, Venue } from 'src/types/types';
 
 @Injectable({
   providedIn: 'root'
@@ -13,11 +13,15 @@ export class VenueService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getShowsPerVenue(): Observable<Venue[]> {
-    return this.httpClient.get<Venue[]>(this.BACKEND_URL + 'venues', {
+  getShowsPerVenue(): Observable<VenueShows[]> {
+    return this.httpClient.get<VenueShows[]>(this.BACKEND_URL + 'venues', {
       params: {
         include: "shows"
       }
     });
+  }
+
+  getVenueInfo(venueId: number): Observable<Venue> {
+    return this.httpClient.get<Venue>(this.BACKEND_URL + 'venues/' + venueId);
   }
 }

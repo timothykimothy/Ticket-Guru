@@ -18,7 +18,6 @@ export class ProfileComponent implements OnInit {
 		this.customer = this.sessionService.getCurrentCustomer();
 		this.reservationService.getReservationsForCustomer(this.customer.id).subscribe((reservations) => {
 			this.reservations = reservations;
-			//TODO: sort these reservations by performance time
 		});
 	}
 }

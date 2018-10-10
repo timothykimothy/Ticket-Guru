@@ -17,7 +17,13 @@ const appRoutes: Routes = [
 		path: 'tickets',
 		loadChildren: '../app/tickets/tickets.module#TicketsModule',
 		canActivate: [SessionService]
-	}
+	},
+	{
+		path: 'reserveSeats',
+		loadChildren: '../app/seats/seats.module#SeatsModule',
+		canActivate: [SessionService]
+	},
+	{ path: '**', redirectTo: '/profile'}
 ];
 
 @NgModule({

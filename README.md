@@ -1,3 +1,5 @@
+# TicketGuru
+
 ## Structure
 App Module/Component
 * Navbar Component
@@ -5,13 +7,25 @@ App Module/Component
 * Profile Module/Component
 	* Reservation Card Component
 * Tickets Module/Component
-	* 
+	* Venue Card Component
 * Seats Module/Component
+	* Seat Selection Component
 
+Services:
+*	Customer Service
+*	Performance Service
+*	Reservation Service
+*	Session Service
+*	Venue Service
 
-# TicketGuru
+Potential Improvements:
+* Add logic to specify which seats the customer wishes to select. The API currently only takes in numSeats when purchasing tickets. 
+* API is too venue-oriented. More flexibility is needed
+* Time Sorting responses
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+*See below for how to run app using angular cli
+
+## This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
 ## Development server
 

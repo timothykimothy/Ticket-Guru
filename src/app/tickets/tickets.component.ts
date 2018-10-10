@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Venue } from 'src/types/types';
+import { VenueShows } from 'src/types/types';
 import { VenueService } from 'src/services/venue.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { VenueService } from 'src/services/venue.service';
 })
 export class TicketsComponent implements OnInit {
 
-  venues: Venue[];
+  venues: VenueShows[];
   constructor(private venueService: VenueService) { }
 
   ngOnInit() {

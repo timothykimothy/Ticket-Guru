@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Venue } from 'src/types/types';
+import { VenueShows } from 'src/types/types';
 import { PerformanceService } from 'src/services/performance.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -11,10 +12,10 @@ import { PerformanceService } from 'src/services/performance.service';
 
 export class VenueCardComponent implements OnInit {
 
-	@Input() venue: Venue;
+	@Input() venue: VenueShows;
 	performanceShowTimesMap: any; //maps showId -> PerformanceShowTime[]
 
-	constructor(private performanceService: PerformanceService) {
+	constructor(private performanceService: PerformanceService, private router: Router) {
 		this.performanceShowTimesMap = {};
 	}
 
@@ -32,5 +33,12 @@ export class VenueCardComponent implements OnInit {
 				});
 			});
 		})
+	}
+
+	reserveSeats(performanceId: number): void {
+		this.router.navigate(['/reserveSeats', {
+			venueId: this.venue.id,
+			performanceId: performanceId
+		}]);
 	}
 }

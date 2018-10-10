@@ -12,7 +12,7 @@
 		<span class="card-value">{{performance?.showTime.toLocaleString()}}</span>
 	</div>
 	<div class="card-info">
-		<span class="card-label">Seats:</span>
+		<span class="card-label">Seats ({{reservation.seats.length}}):</span>
 		<br>
 		<div *ngFor="let seat of reservation.seats" class="seat-info">
 			Row: {{seat.row}}
